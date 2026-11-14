@@ -1,6 +1,6 @@
 package app.rest.controllers;
 
-import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
@@ -19,7 +19,7 @@ public class EventController {
 	@Autowired
 	private EventComponent manager;
 
-	@POST
+	@GET
 	@Path("/sessiontitle")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Events getSessionTitle(@QueryParam("sessionTitle") String title) {

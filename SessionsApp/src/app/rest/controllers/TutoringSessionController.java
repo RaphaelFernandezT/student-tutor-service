@@ -11,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import app.components.TutoringSessionComponent;
 import app.entity.TutoringSession;
 
 @Component
@@ -18,7 +19,7 @@ import app.entity.TutoringSession;
 public class TutoringSessionController {
 
 	@Autowired
-	private TutoringSessionController manager;
+	private TutoringSessionComponent manager;
 	
 	@GET
 	@Path("/getcourse")
