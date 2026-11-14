@@ -1,0 +1,29 @@
+package app.entity;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+
+@Entity
+public class TutoringSession {
+
+	private Long pk;
+	private Location location;
+	private User tutor;
+	private User tutee;
+	private String description;
+	private LocalDateTime time;
+	
+	
+	public TutoringSession(Long pk, Location location, User tutor, User tutee, String description, LocalDateTime time) {
+		super();
+		this.pk = pk;
+		this.location = location;
+		this.tutor = tutor;
+		this.tutee = tutee;
+		this.description = description;
+		this.time = time;
+	}
+	
+	
+}

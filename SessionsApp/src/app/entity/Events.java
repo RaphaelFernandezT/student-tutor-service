@@ -21,10 +21,12 @@ public class Events {
 	private Long pk;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
+	@Column
 	private Location location;
 	
 	@NotNull
 	@ManyToOne(fetch = FetchType.EAGER)
+	@Column
 	private Organizer organizer;
 	
 	@NotNull
