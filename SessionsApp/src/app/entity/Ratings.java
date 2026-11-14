@@ -1,16 +1,42 @@
 package app.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.Range;
 
 @Entity
 public class Ratings {
 	
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
 	private Long pk;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@Column
 	private TutoringSession session;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@Column
 	private User tutor;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@Column
 	private User tutee;
+	
+	@NotNull
+	@Range(min=1, max=5)
+	@Column
 	private Integer score;
+	
+	@Column
 	private String comment;
 	
 	public Ratings() {
