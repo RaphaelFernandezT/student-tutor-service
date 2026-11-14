@@ -1,0 +1,14 @@
+package app.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Events {
+	
+	private Long pk;
+	private String location;
+	private 
+	
+	
+	
+}

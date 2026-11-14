@@ -1,2 +1,3 @@
-2026/11/13-14:05:46.928 1974 Creating DB C:\Users\RAPHAEL FERNANDEZ\Documents\CODING PROGRAMS FOLDER\3rd year\1st Sem\Eclipse IDE\ESP Project\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB since it was missing.
-2026/11/13-14:05:46.937 1974 Reusing MANIFEST C:\Users\RAPHAEL FERNANDEZ\Documents\CODING PROGRAMS FOLDER\3rd year\1st Sem\Eclipse IDE\ESP Project\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/11/14-19:23:10.020 4680 Reusing MANIFEST C:\Users\RAPHAEL FERNANDEZ\Documents\CODING PROGRAMS FOLDER\3rd year\1st Sem\Eclipse IDE\ESP Project\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/11/14-19:23:10.021 4680 Recovering log #3
+2026/11/14-19:23:10.021 4680 Reusing old log C:\Users\RAPHAEL FERNANDEZ\Documents\CODING PROGRAMS FOLDER\3rd year\1st Sem\Eclipse IDE\ESP Project\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Sync Data\LevelDB/000003.log 
