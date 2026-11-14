@@ -20,15 +20,12 @@ public class Booking {
 	private Long pk;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private User user;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private Events events;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private TutoringSession sessions;
 	
 	@NotNull

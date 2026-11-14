@@ -20,17 +20,18 @@ public class TutoringSession {
 	private Long pk;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private Location location;
 	
 	@NotNull
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private User tutor;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@Column
 	private User tutee;
+	
+	@NotNull
+	@Column
+	private String course;
 	
 	@Column
 	private String description;
@@ -45,15 +46,21 @@ public class TutoringSession {
 	}
 
 
-	public TutoringSession(Long pk, Location location, User tutor, User tutee, String description, LocalDateTime time) {
+
+	public TutoringSession(Long pk, Location location, @NotNull User tutor, User tutee, @NotNull String course,
+			String description, @NotNull LocalDateTime time) {
 		super();
 		this.pk = pk;
 		this.location = location;
 		this.tutor = tutor;
 		this.tutee = tutee;
+		this.course = course;
 		this.description = description;
 		this.time = time;
 	}
+
+
+
 
 
 	public Long getPk() {
@@ -113,6 +120,16 @@ public class TutoringSession {
 
 	public void setTime(LocalDateTime time) {
 		this.time = time;
+	}
+
+
+	public String getCourse() {
+		return course;
+	}
+
+
+	public void setCourse(String course) {
+		this.course = course;
 	}
 	
 	
