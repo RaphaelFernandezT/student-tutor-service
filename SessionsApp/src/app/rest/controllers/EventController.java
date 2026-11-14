@@ -20,7 +20,7 @@ public class EventController {
 	private EventComponent manager;
 
 	@POST
-	@Path("/sessionTitle")
+	@Path("/sessiontitle")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Events getSessionTitle(@QueryParam("sessionTitle") String title) {
 		return manager.getEvent(title);
