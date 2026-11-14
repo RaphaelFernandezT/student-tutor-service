@@ -1,0 +1,146 @@
+
+package app.entity;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class Events {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column
+	private Long pk;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Location location;
+	
+	@NotNull
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Organizer organizer;
+	
+	@NotNull
+	@Column
+	private String org;
+	
+	@NotNull
+	@Column
+	private String department;
+	
+	@NotNull
+	@Column
+	private Integer maxStudents;
+	
+	@NotNull
+	@Column
+	private Integer currentStudents;
+	
+	@NotNull
+	@Column
+	private String sessionTitle;
+	
+	@NotNull
+	@Column
+	private String description;
+	
+	@NotNull
+	@Column
+	private LocalDateTime time;
+	
+	@NotNull
+	@Column
+	private String course;
+	
+	
+	
+	
+	public Events() {
+		
+	}
+	public Events(Long pk, Location location, User hoster, String org, String department, Integer maxStudents,
+			Integer currentStudents, String description, LocalDateTime time, String course) {
+		super();
+		this.pk = pk;
+		this.location = location;
+		this.hoster = hoster;
+		this.org = org;
+		this.department = department;
+		this.maxStudents = maxStudents;
+		this.currentStudents = currentStudents;
+		this.description = description;
+		this.time = time;
+		this.course = course;
+	}
+	public Long getPk() {
+		return pk;
+	}
+	public void setPk(Long pk) {
+		this.pk = pk;
+	}
+	public Location getLocation() {
+		return location;
+	}
+	public void setLocation(Location location) {
+		this.location = location;
+	}
+	public User getHoster() {
+		return hoster;
+	}
+	public void setHoster(User hoster) {
+		this.hoster = hoster;
+	}
+	public String getOrg() {
+		return org;
+	}
+	public void setOrg(String org) {
+		this.org = org;
+	}
+	public String getDepartment() {
+		return department;
+	}
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	public Integer getMaxStudents() {
+		return maxStudents;
+	}
+	public void setMaxStudents(Integer maxStudents) {
+		this.maxStudents = maxStudents;
+	}
+	public Integer getCurrentStudents() {
+		return currentStudents;
+	}
+	public void setCurrentStudents(Integer currentStudents) {
+		this.currentStudents = currentStudents;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	public LocalDateTime getTime() {
+		return time;
+	}
+	public void setTime(LocalDateTime time) {
+		this.time = time;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	
+	
+	
+	
+}

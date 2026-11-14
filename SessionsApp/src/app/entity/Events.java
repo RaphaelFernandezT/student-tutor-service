@@ -25,7 +25,7 @@ public class Events {
 	
 	@NotNull
 	@ManyToOne(fetch = FetchType.EAGER)
-	private User hoster;
+	private Organizer organizer;
 	
 	@NotNull
 	@Column
@@ -65,12 +65,12 @@ public class Events {
 	public Events() {
 		
 	}
-	public Events(Long pk, Location location, User hoster, String org, String department, Integer maxStudents,
+	public Events(Long pk, Location location, Organizer organizer, String org, String department, Integer maxStudents,
 			Integer currentStudents, String description, LocalDateTime time, String course) {
 		super();
 		this.pk = pk;
 		this.location = location;
-		this.hoster = hoster;
+		this.organizer = organizer;
 		this.org = org;
 		this.department = department;
 		this.maxStudents = maxStudents;
@@ -91,11 +91,11 @@ public class Events {
 	public void setLocation(Location location) {
 		this.location = location;
 	}
-	public User getHoster() {
-		return hoster;
+	public Organizer getOrganizer() {
+		return organizer;
 	}
-	public void setHoster(User hoster) {
-		this.hoster = hoster;
+	public void setOrganizer(Organizer organizer) {
+		this.organizer = organizer;
 	}
 	public String getOrg() {
 		return org;
