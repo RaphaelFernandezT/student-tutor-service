@@ -49,6 +49,7 @@ public class Booking {
 		this.sessions = sessions;
 		this.time = time;
 	}
+	
 	public Long getPk() {
 		return pk;
 	}
