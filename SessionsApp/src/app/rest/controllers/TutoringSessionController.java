@@ -14,14 +14,14 @@ import org.springframework.stereotype.Component;
 import app.entity.TutoringSession;
 
 @Component
-@Path("/location")
+@Path("/tutoringsessions")
 public class TutoringSessionController {
 
 	@Autowired
 	private TutoringSessionController manager;
 	
 	@GET
-	@Path("/getall")
+	@Path("/getcourse")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<TutoringSession> getSessionWithCourse(@QueryParam("course") String course) {
 		return manager.getSessionWithCourse(course);
